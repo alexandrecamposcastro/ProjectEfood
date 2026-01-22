@@ -1,28 +1,24 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { FooterContainer, SocialLinks, TextoFooter } from './styles'
-import logo from '../../assets/logo.png'
-import instagram from '../../assets/instagram.svg'
-import facebook from '../../assets/facebook.svg'
-import twitter from '../../assets/twitter.svg'
 
 const Footer = () => (
   <FooterContainer>
     <div className="container">
-      <img src={logo} alt="efood" />
+      <img src="/assets/logo.png" alt="efood" />
       <SocialLinks>
         <li>
           <a href="#">
-            <img src={instagram} alt="Instagram" />
+            <img src="/assets/instagram.svg" alt="Instagram" />
           </a>
         </li>
         <li>
           <a href="#">
-            <img src={facebook} alt="Facebook" />
+            <img src="/assets/facebook.svg" alt="Facebook" />
           </a>
         </li>
         <li>
           <a href="#">
-            <img src={twitter} alt="Twitter" />
+            <img src="/assets/twitter.svg" alt="Twitter" />
           </a>
         </li>
       </SocialLinks>
