@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { cores } from '../../styles/GlobalStyle'
 
 export const CartContainer = styled.div`
   position: fixed;
@@ -7,78 +6,79 @@ export const CartContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: flex-end;
   z-index: 100;
+  &.is-open { display: flex; }
 `
-
 export const Overlay = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0; width: 100%; height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 `
-
 export const Sidebar = styled.aside`
-  background-color: ${cores.vermelha};
+  background-color: #E66767;
   z-index: 101;
   padding: 32px 8px;
-  max-width: 360px;
-  width: 100%;
+  width: 360px;
+  height: 100%;
+  overflow-y: auto;
+  .empty-text { color: #FFEBD9; text-align: center; }
 `
-
 export const CartItem = styled.li`
   display: flex;
-  background-color: ${cores.bege};
+  background-color: #FFEBD9;
   padding: 8px;
   position: relative;
   margin-bottom: 16px;
-
-  img {
-    height: 80px;
-    width: 80px;
-    object-fit: cover;
-    margin-right: 8px;
+  img { height: 80px; width: 80px; object-fit: cover; margin-right: 8px; }
+  h3 { color: #E66767; font-weight: bold; font-size: 18px; }
+  span { display: block; color: #E66767; font-size: 14px; margin-top: 8px; }
+  
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    button {
+      background-color: #E66767;
+      color: #FFEBD9;
+      border: none;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+    strong { color: #E66767; }
   }
 
-  h3 { font-size: 18px; font-weight: 900; }
-  .remove {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    background-image: url('/assets/lixeira.png');
+  .remove-btn {
+    background-image: url('https://raw.githubusercontent.com/gian-lopes/efood/main/src/assets/images/lixeira.png');
     width: 16px;
     height: 16px;
     border: none;
+    background-color: transparent;
     cursor: pointer;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
   }
 `
-
-export const QuantityContainer = styled.div`
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin-top: 8px;
-  button { border: none; cursor: pointer; padding: 2px 6px; }
-`
-
 export const TotalContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  color: ${cores.bege};
+  color: #FFEBD9;
+  font-weight: bold;
   margin-top: 40px;
-  font-weight: 700;
+  margin-bottom: 16px;
 `
-
 export const ButtonCheckout = styled.button`
-  background-color: ${cores.bege};
-  color: ${cores.vermelha};
+  background-color: #FFEBD9;
+  color: #E66767;
   border: none;
+  padding: 8px;
+  font-weight: bold;
   width: 100%;
-  padding: 4px;
-  font-weight: 700;
-  margin-top: 16px;
   cursor: pointer;
 `
