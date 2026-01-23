@@ -1,35 +1,37 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const cores = {
-  branca: '#FFF8F2',
-  brancaPura: '#FFFFFF',
   vermelha: '#E66767',
   bege: '#FFEBD9',
-  amarelo: '#FFB930'
+  begeClaro: '#FFF8F2',
+  branco: '#FFFFFF'
 }
 
-export const GlobalCss = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
     list-style: none;
+    text-decoration: none;
   }
 
   body {
-    background-color: ${cores.branca};
+    background-color: ${cores.begeClaro};
     color: ${cores.vermelha};
+    overflow-x: hidden;
   }
 
   .container {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
-    
-    @media (max-width: 1024px) {
-      padding: 0 20px; 
-      /* Garante que não cole nas bordas em telas menores */
-    }
+    padding: 0 16px;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
   }
 `

@@ -1,19 +1,19 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { GlobalCss } from './styles/GlobalStyle'
-import Home from './pages/Home'
-import Perfil from './pages/Profile'
-import Footer from './components/Footer'
+import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
+import { GlobalStyle } from './styles/GlobalStyle'
+import { store } from './store'
+import Rotas from './routes'
+import Cart from './components/Cart'
 
 function App() {
   return (
-    <BrowserRouter>
-      <GlobalCss />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/perfil/:id" element={<Perfil />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <GlobalStyle />
+        <Rotas />
+        <Cart />
+      </BrowserRouter>
+    </Provider>
   )
 }
 

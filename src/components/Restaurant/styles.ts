@@ -1,12 +1,16 @@
 import styled from 'styled-components'
-import { cores } from '../../styles/GlobalStyle'
 import { Link } from 'react-router-dom'
+import { cores } from '../../styles/GlobalStyle'
 
 export const Card = styled.div`
-  background-color: ${cores.brancaPura};
+  background-color: ${cores.branco};
   border: 1px solid ${cores.vermelha};
   position: relative;
-  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 472px;
+  margin: 0 auto;
 `
 
 export const Capa = styled.img`
@@ -18,46 +22,76 @@ export const Capa = styled.img`
 
 export const Infos = styled.div`
   padding: 8px;
-  
-  .header-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-    
-    span { color: ${cores.amarelo}; margin-left: 8px; }
-  }
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-top: 1px solid ${cores.vermelha};
+`
+
+export const TituloContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
 `
 
 export const Titulo = styled.h3`
-  font-weight: bold;
   font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: ${cores.vermelha};
+`
+
+export const NotaContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  span {
+    font-size: 18px;
+    font-weight: 700;
+    color: ${cores.vermelha};
+  }
+
+  img {
+    width: 21px;
+    height: 21px;
+    object-fit: contain;
+  }
 `
 
 export const Descricao = styled.p`
   font-size: 14px;
   line-height: 22px;
   margin-bottom: 16px;
-`
-
-export const Tag = styled.div`
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background-color: ${cores.vermelha};
-  color: ${cores.bege};
-  font-size: 12px;
-  font-weight: bold;
-  padding: 6px 4px;
+  color: ${cores.vermelha};
 `
 
 export const Botao = styled(Link)`
   background-color: ${cores.vermelha};
   color: ${cores.bege};
   padding: 4px 6px;
-  font-size: 14px;
-  font-weight: bold;
   border: none;
-  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
   display: inline-block;
+  cursor: pointer;
+  width: fit-content;
+`
+
+export const TagContainer = styled.div`
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+`
+
+export const Tag = styled.div`
+  background-color: ${cores.vermelha};
+  color: ${cores.bege};
+  padding: 6px 4px;
+  font-size: 12px;
+  font-weight: 700;
 `
