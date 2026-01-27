@@ -54,7 +54,7 @@ export const CartItem = styled.li`
   }
 
   .remove-btn {
-    background-image: url('https://raw.githubusercontent.com/gian-lopes/efood/main/src/assets/images/lixeira.png');
+    background-image: url('/assets/lixeira.png');
     width: 16px;
     height: 16px;
     border: none;
