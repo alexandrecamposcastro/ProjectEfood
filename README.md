@@ -11,7 +11,7 @@ A modern food delivery frontend platform built with **React**, **TypeScript**, a
 * **API Integration:** Fetches data from a backend service to populate restaurants, menus, and process orders.
 * **Responsive Design:** Fully optimized for mobile, tablet, and desktop views.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 * **Core:** React 18 & TypeScript
 * **State Management:** Redux Toolkit (Slices & API Query)
@@ -27,7 +27,7 @@ A modern food delivery frontend platform built with **React**, **TypeScript**, a
 * `src/store/`: Redux configuration and state slices.
 * `src/styles/`: Global styles and theme definitions.
 
-## 🔧 Installation & Setup
+## Installation & Setup
 
 1.  **Clone the repository:**
     ```bash
